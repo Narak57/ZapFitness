@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<div class="jumbotron">
+    <h1>Welcome to Zap Fitness Dashborad</h1>
+    <p class="lead">Manage your gym members, classes, and schedules easily and efficiently.</p>
+    <p>
+        <a href="@Url.Action("Index", "Member")" class="btn btn-primary btn-lg">View Members</a>
+        <a href="@Url.Action("Create", "Member")" class="btn btn-success btn-lg">Add New Member</a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Members</h2>
+        <p>Track and update member information</p>
+        <p><a class="btn btn-default" href="@Url.Action("Index", "Member")">Manage Members &raquo;</a></p>
+    </div>
+</div>

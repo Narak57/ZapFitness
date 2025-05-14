@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ZapFitness.Models.Member_Model>
+@{
+    ViewBag.Title = "Member List";
+}
+
+<h2>Member List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Member ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Actions</th> 
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var member in Model)
+        {
+            <tr>
+                <td>@member.MemberID</td>
+                <td>@member.FirstName</td>
+                <td>@member.LastName</td>
+                <td>@member.Phone</td>
+                <td>
+                    <!-- Edit Button -->
+                    @Html.ActionLink("Edit", "Edit", new { id = member.MemberID }, new { @class = "btn btn-primary" })
+
+                    <!-- Delete Button -->
+                    @using (Html.BeginForm("Delete", "Member", new { id = member.MemberID }, FormMethod.Post, new { onsubmit = "return confirm('Are you sure you want to delete?');" }))
+                    {
+                        <input type="submit" value="Delete" class="btn btn-danger" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

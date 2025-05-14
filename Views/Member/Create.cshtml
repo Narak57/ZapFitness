@@ -1,0 +1,26 @@
+﻿@model ZapFitness.Models.Member_Model
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Join Now</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Phone)
+        @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+    </div>
+    <input type="submit" value="Create" style="background-color: blue; color: white; border: none; padding: 10px 20px; cursor: pointer; font-size: 16px;" />
+}
