@@ -2,31 +2,56 @@
     ViewBag.Title = "About";
 }
 
-<div class="jumbotron">
-    <h1>About Zap Fitness</h1>
-    <p class="lead">Your fitness journey starts here at Zap Fitness, offering top-quality equipment and expert guidance to help you achieve your goals.</p>
-</div>
 
-<div class="row">
-    <div class="col-md-6">
-        <h3>Our Mission</h3>
-        <p>To provide a welcoming space for all fitness levels with the best equipment, professional guidance, and a supportive community.</p>
-    </div>
-    <div class="col-md-6">
-        <h3>Our Vision</h3>
-        <p>To be the leading gym that empowers members to live healthier and achieve their fitness goals.</p>
+<div class="hero-section d-flex align-items-center justify-content-center text-white text-center"
+     style="background-image: url('@Url.Content("~/Content/images/aboutPic.jpg")');
+            background-size: cover;
+            background-position: center;
+            height: 600px;">
+    <div class="container">
+        <h1 class="display-4 fw-bold" style="font-family: 'Sugo Display', sans-serif;">About Zap Fitness</h1>
+        <p class="lead" style="text-shadow: 3px 3px 6px rgba(0, 0, 0, 1), 2px 2px 4px rgba(0, 0, 0, 0.8);">Start your fitness journey with expert guidance and top-quality equipment.</p>
     </div>
 </div>
+<!-- Content Section -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Our Mission -->
+        <div class="col-md-6 mb-4">
+            <h2 class="fw-bold">Our Mission</h2>
+            <p class="lead" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">
+                To provide a welcoming space for all fitness levels with the best equipment, professional guidance, and a supportive community.
+            </p>
+        </div>
 
-<hr />
+        <!-- Our Vision -->
+        <div class="col-md-6 mb-4">
+            <h2 class="fw-bold">Our Vision</h2>
+            <p class="lead" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);">
+                To be the leading gym that empowers members to live healthier and achieve their fitness goals.
+            </p>
+        </div>
+    </div>
 
-<h3>Why Choose Us?</h3>
-<ul>
-    <li>24/7 gym access</li>
-    <li>Wide range of gym equipment</li>
-    <li>Expert trainers</li>
-    <li>Motivating atmosphere</li>
-    <li>Hello</li>
-    <li>Test Again<li>
-    <li>Test Again 2</li>
-</ul>
+    <div class="text-center">
+        <h2 class="fw-bold mb-4">Why Choose Us?</h2>
+        <ul class="list-unstyled d-inline-block text-start">
+            <li class="d-flex align-items-start mb-2">
+                <span class="me-2" style="width: 30px;">✅</span>
+                <span>24/7 gym access</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="me-2" style="width: 30px;">✅</span>
+                <span>Wide range of equipment</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="me-2" style="width: 30px;">✅</span>
+                <span>Expert trainers</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+                <span class="me-2" style="width: 30px;">✅</span>
+                <span>Motivating atmosphere</span>
+            </li>
+        </ul>
+    </div>
+</div>
