@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ZapFitness.Models.Session>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Buy Classes</h2>
+
+<p>
+    @Html.ActionLink("Create Class", "Create", null, new { @class = "btn btn-primary mb-3" })
+</p>
+
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Session ID</th>
+            <th>Session Name</th>
+            <th>Session Schedule</th>
+            <th>Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var session in Model)
+        {
+            <tr>
+                <td>@session.SessionId</td>
+                <td>@session.SessionName</td>
+                <td>@session.Schedule.ToString()</td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = session.SessionId }, new { @class = "btn btn-sm btn-warning me-1" })
+                    @Html.ActionLink("Delete", "Delete", new { id = session.SessionId }, new { @class = "btn btn-sm btn-danger" })
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
