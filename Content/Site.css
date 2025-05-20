@@ -18,3 +18,16 @@ select,
 textarea {
     max-width: 280px;
 }
+/*Nav Bar*/
+.nav-custom-link {
+   
+    font-weight: bold;
+    color: black; /* default link color */
+}
+
+.nav-custom-link:hover {
+    color: white; 
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
