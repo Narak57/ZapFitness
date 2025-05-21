@@ -6,16 +6,16 @@
 <h2>Member List</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Register New Member", "Create", null, new { @class = "btn btn-primary" })
 </p>
-<table class="table">
-    <thead>
+<table class="table table-bordered">
+    <thead class="table-dark">
         <tr>
             <th>Member ID</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Phone</th>
-            <th>Actions</th> 
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -28,12 +28,11 @@
                 <td>@member.Phone</td>
                 <td>
                     <!-- Edit Button -->
-                    @Html.ActionLink("Edit", "Edit", new { id = member.MemberID }, new { @class = "btn btn-primary" })
-
+                    @Html.ActionLink("Edit", "Edit", new { id = member.MemberID }, new { @class = "btn btn-sm btn-warning me-1" })
                     <!-- Delete Button -->
                     @using (Html.BeginForm("Delete", "Member", new { id = member.MemberID }, FormMethod.Post, new { onsubmit = "return confirm('Are you sure you want to delete?');" }))
                     {
-                        <input type="submit" value="Delete" class="btn btn-danger" />
+                        <input type="submit" value="Delete" class="btn btn-sm btn-danger" />
                     }
                 </td>
             </tr>

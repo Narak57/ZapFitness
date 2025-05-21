@@ -1,15 +1,13 @@
 ﻿@{
     ViewBag.Title = "Home";
 }
-
+<div class="container text-center">
+    <h1 class="display-4 fw-bold">Welcome to Zap Fitness</h1>
+    <p class="lead mb-4">Your journey to a healthier, stronger you starts here.</p>
+</div>
 <div class="hero-section text-white d-flex align-items-center" style="background-image: url('@Url.Content("~/Content/images/hero-bg.jpg")'); background-size: cover; background-position: center; height: 600px;">
     <div class="container text-center">
-        <h1 class="display-4 fw-bold">Welcome to Zap Fitness</h1>
-        <p class="lead mb-4">Your journey to a healthier, stronger you starts here.</p>
-        <a href="@Url.Action("Create", "Member")" class="btn btn-primary btn-lg">Join Us </a>
-        <a href="@Url.Action("Index", "Session")" class="btn btn-success btn-lg">Buy Classes </a>
+        <a href="@Url.Action("Index", "Member")" class="btn btn-primary btn-lg"> Member Management </a>
+        <a href="@Url.Action("Index", "Session")" class="btn btn-success btn-lg"> Class Management </a>
     </div>
 </div>
-
-
-
