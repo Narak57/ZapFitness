@@ -11,7 +11,7 @@ namespace ZapFitness.Controllers
     public class MemberController : Controller
     {
         
-        private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Gym_Management;Integrated Security=True";
+        private string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ZapFitness;Integrated Security=True";
 
 
         // Display All members
